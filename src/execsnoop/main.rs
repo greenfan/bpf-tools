@@ -17,10 +17,10 @@ enum event_type {
 
 #[repr(C)]
 struct data_t {
-    pid: u32,          // process-id
-    ppid: u32,         // parent process-id
+    pid: u32,          // pid
+    ppid: u32,         // parent pid
     uid: u32,          // user-id
-    comm: [u8; 16],    // command name
+    comm: [u8; 16],    // command name # improve this selector
     etype: event_type, // event type
     argv: [u8; 128],   // arguments vector
     retval: u8,        // returned value
